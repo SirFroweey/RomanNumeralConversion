@@ -41,6 +41,8 @@ def home(request):
             context['roman_numeral'] = (c['number'], int2numeral(c['number']))
     else:
         form = RomanNumeralForm()
+
+    context['form'] = form
     return render(request, "home.html", context)
 
 
